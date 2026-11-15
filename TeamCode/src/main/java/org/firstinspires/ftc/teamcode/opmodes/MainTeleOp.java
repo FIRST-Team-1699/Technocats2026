@@ -34,7 +34,7 @@ public class MainTeleOp extends OpMode {
 
     // Calibration table: distance (inches) -> flywheel power
     private static final double[] DIST_IN = {24, 42, 50, 55};
-    private static final double[] POWER   = {0.44, 0.54, 0.64, 0.74};
+    private static final double[] POWER   = {0.43, 0.53, 0.63, 0.73};
 
     // Hold-to-aim tuning
     private static final double AIM_KP = 0.020;          // turn power per degree of tx
@@ -186,7 +186,8 @@ public class MainTeleOp extends OpMode {
                 double hiveY = (alliance == Alliance.RED) ? RED_HIVE_Y : BLUE_HIVE_Y;
                 dist = Math.hypot(hiveX - follower.pose().x(), hiveY - follower.pose().y());
             }
-            shooter.setFlywheelPower(powerForDistance(dist));
+            //shooter.setFlywheelPower(powerForDistance(dist));
+            shooter.setFlywheelPower(ShooterIndexerSubsystem.powerForDistance(dist));
         }
 
         // Shoot (Right Bumper) only when the driver is aimed (left bumper held and locked)
@@ -211,7 +212,7 @@ public class MainTeleOp extends OpMode {
         telemetry.update();
     }
 
-    private static double powerForDistance(double d) {
+ /*   private static double powerForDistance(double d) {
         if (d <= DIST_IN[0]) return POWER[0];
         if (d >= DIST_IN[DIST_IN.length - 1]) return POWER[POWER.length - 1];
         for (int i = 0; i < DIST_IN.length - 1; i++) {
@@ -222,6 +223,8 @@ public class MainTeleOp extends OpMode {
         }
         return POWER[POWER.length - 1];
     }
+
+  */
 
     private int[] hiveTags() {
         return alliance == Alliance.RED ? VisionSubsystem.RED_HIVE_TAGS : VisionSubsystem.BLUE_HIVE_TAGS;

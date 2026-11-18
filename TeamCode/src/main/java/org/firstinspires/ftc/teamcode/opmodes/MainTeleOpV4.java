@@ -14,7 +14,7 @@ import org.firstinspires.ftc.teamcode.subsystems.IntakeSubsystem;
 import org.firstinspires.ftc.teamcode.subsystems.ShooterIndexerSubsystemV3;
 import org.firstinspires.ftc.teamcode.subsystems.VisionSubsystem;
 
-@TeleOp(name = "Mecanum Ivy Dual TeleOp V4", group = "TeleOp")
+@TeleOp(name = "MainTeleop W Vel V4", group = "TeleOp")
 public class MainTeleOpV4 extends OpMode {
 
     private Follower follower;
@@ -129,7 +129,7 @@ public class MainTeleOpV4 extends OpMode {
         // ==========================================
         // PERSISTENT PROCESSING ENGINE
         // ==========================================
-        Scheduler.execute();
+        Scheduler. execute();
 
         // Telemetry
         String aimState = !gamepad1.left_bumper ? "off"

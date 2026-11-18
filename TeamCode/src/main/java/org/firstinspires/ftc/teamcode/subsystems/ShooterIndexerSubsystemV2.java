@@ -9,7 +9,6 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-
 public class ShooterIndexerSubsystemV2 {
     private final DcMotorEx flywheel;
     private final CRServo indexer;
@@ -71,11 +70,9 @@ public class ShooterIndexerSubsystemV2 {
 
     public double calculateShooterVelocity(double distanceInches) {
         // Tune these two test points on the field: (Distance -> Velocity in ticks/sec)
-        double minDist = 36.0, minVel = 1800.0;
-        double maxDist = 96.0, maxVel = 2650.0;
 
         double clampedDist = Math.max(MIN_DIST, Math.min(MAX_DIST, distanceInches));
-        return minVel + ((clampedDist - MIN_DIST) / (MAX_DIST - MIN_DIST)) * (MAX_VEL - MIN_VEL);
+        return MIN_VEL + ((clampedDist - MIN_DIST) / (MAX_DIST - MIN_DIST)) * (MAX_VEL - MIN_VEL);
     }
 
 

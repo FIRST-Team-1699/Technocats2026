@@ -26,15 +26,15 @@ public class ShooterIndexerSubsystemV3 {
     private static final double BLUE_HIVE_X = 84.0, BLUE_HIVE_Y = 71.5;
 
     // Flywheel speed in encoder ticks per second. Placeholders until calibrated on the field.
-    private static final double[] DIST_IN = {36, 60, 84, 108};
-    private static final double[] SPEED_TPS = {1200, 1400, 1600, 1800};
-    private static final double FALLBACK_SPEED_TPS = 1400;
+    private static final double[] DIST_IN = {24, 42, 50, 55};
+    private static final double[] SPEED_TPS = {1275, 1475, 1675, 1875};
+    private static final double FALLBACK_SPEED_TPS = 1300;
     private static final double SPEED_TOLERANCE_TPS = 50;
     private static final int SPIN_UP_TIMEOUT_MS = 2000;
 	
 	// Flywheel speed pidf tuning
 	private static final double P_COEF = 10.0;
-    private static final double I_COEF = 0.0;
+    private static final double I_COEF = 5.0;
     private static final double D_COEF = 0.0;
     private static final double F_COEF = 12.0;
 

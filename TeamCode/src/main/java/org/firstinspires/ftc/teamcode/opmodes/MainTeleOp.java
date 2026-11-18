@@ -15,7 +15,7 @@ import com.pedropathing.drivetrain.DrivePowers;
 import com.pedropathing.follower.ManualDrive;
 
 
-@TeleOp(name = "Mecanum Ivy Dual TeleOp V2", group = "TeleOp")
+@TeleOp(name = "Original Teleop", group = "TeleOp")
 public class MainTeleOp extends OpMode {
 
     private Follower follower;

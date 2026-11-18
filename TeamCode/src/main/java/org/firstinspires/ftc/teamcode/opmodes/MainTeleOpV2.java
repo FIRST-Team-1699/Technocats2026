@@ -15,7 +15,7 @@ import org.firstinspires.ftc.teamcode.subsystems.ShooterIndexerSubsystemV2;
 import org.firstinspires.ftc.teamcode.subsystems.VisionSubsystem;
 
 
-@TeleOp(name = "Mecanum Ivy Dual TeleOp V2", group = "TeleOp")
+@TeleOp(name = "MainTeleop W Vel V2", group = "TeleOp")
 public class MainTeleOpV2 extends OpMode {
 
     private Follower follower;

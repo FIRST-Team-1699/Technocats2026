@@ -58,7 +58,7 @@ public class PedroIvyLimelightAutoV3 extends OpMode {
     // Measure on the field. Zeros mean unmeasured, so the shooter uses a fixed power.
     private static final double RED_HIVE_X = 58.0, RED_HIVE_Y = 71.5;
     private static final double BLUE_HIVE_X = 84.0, BLUE_HIVE_Y = 71.5;
-    private static final double SHOOT_POWER_FALLBACK = 0.65;
+    private static final double SHOOT_POWER_FALLBACK = 0.35;
 
     private int[] targetTags = VisionSubsystem.RED_HIVE_TAGS;
     private double hiveX, hiveY;
@@ -164,7 +164,7 @@ public class PedroIvyLimelightAutoV3 extends OpMode {
             double power = Double.isNaN(dist)
                     ? SHOOT_POWER_FALLBACK
                     : ShooterIndexerSubsystem.powerForDistance(dist);
-            shooter.setFlywheelPower(power);
+            shooter.setFlywheelPower(0.54);  //power
         });
 
         Command shootAllBalls = sequential(

@@ -46,7 +46,7 @@ public class ShooterIndexerSubsystem {
 
     // Distance (inches) to hive -> flywheel power. Placeholder values until calibrated on the field.
     private static final double[] DIST_IN = {24, 42, 50, 55};
-    private static final double[] POWER   = {0.43, 0.53, 0.63, 0.73};
+    private static final double[] POWER   = {0.42, 0.52, 0.62, 0.72};
 
     public static double powerForDistance(double d) {
         if (d <= DIST_IN[0]) return POWER[0];

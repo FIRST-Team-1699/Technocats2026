@@ -187,7 +187,8 @@ public class MainTeleOp extends OpMode {
                 dist = Math.hypot(hiveX - follower.pose().x(), hiveY - follower.pose().y());
             }
             //shooter.setFlywheelPower(powerForDistance(dist));
-            shooter.setFlywheelPower(ShooterIndexerSubsystem.powerForDistance(dist));
+            shooter.setFlywheelPower(0.54);
+            //shooter.setFlywheelPower(ShooterIndexerSubsystem.powerForDistance(dist));
         }
 
         // Shoot (Right Bumper) only when the driver is aimed (left bumper held and locked)

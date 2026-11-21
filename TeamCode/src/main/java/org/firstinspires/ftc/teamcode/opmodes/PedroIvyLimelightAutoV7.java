@@ -37,7 +37,7 @@ public class PedroIvyLimelightAutoV7 extends OpMode {
 
     // --- Red route (field inches, corner origin, red frame) ---
     private final Pose redStartPose = new Pose(53.3, 6.5, Math.toRadians(270));
-    private final Pose redTargetAreaPose = new Pose(57.75, 24, Math.toRadians(270));
+    private final Pose redTargetAreaPose = new Pose(53.3, 12, Math.toRadians(270));
 
     // Curve around the Red HIVE (x 46 to 48.6, y 50 to 91.4) to the park end
     private final Pose redParkCtrl1 = new Pose(30.75, 33.75, 0);

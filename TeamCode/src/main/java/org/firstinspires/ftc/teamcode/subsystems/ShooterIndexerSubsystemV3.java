@@ -26,22 +26,22 @@ public class ShooterIndexerSubsystemV3 {
     private static final double BLUE_HIVE_X = 84.0, BLUE_HIVE_Y = 71.5;
 
     // Flywheel speed in encoder ticks per second. Placeholders until calibrated on the field.
-    private static final double[] DIST_IN = {24, 42, 50, 55};
-    private static final double[] SPEED_TPS = {1275, 1475, 1675, 1875};
-    private static final double FALLBACK_SPEED_TPS = 1300;
+    private static final double[] DIST_IN = {20, 30, 40, 50};
+    private static final double[] SPEED_TPS = {1460, 1460, 1460, 1460};
+    private static final double FALLBACK_SPEED_TPS = 1475;
     private static final double SPEED_TOLERANCE_TPS = 50;
     private static final int SPIN_UP_TIMEOUT_MS = 2000;
 	
 	// Flywheel speed pidf tuning
-	private static final double P_COEF = 10.0;
-    private static final double I_COEF = 5.0;
+	private static final double P_COEF = 2.0;
+    private static final double I_COEF = 0.0;
     private static final double D_COEF = 0.0;
-    private static final double F_COEF = 12.0;
+    private static final double F_COEF = 15.75;
 
     // Indexer timing per ball
     private static final double FEED_POWER = 1.0;
-    private static final int FEED_MS = 500;      // time for one ball to clear the indexer
-    private static final int RECOVER_MS = 500;   // time for the flywheel to recover between balls
+    private static final int FEED_MS = 250;      // time for one ball to clear the indexer
+    private static final int RECOVER_MS = 1000;   // time for the flywheel to recover between balls
 
     // Aim tuning
     private static final double AIM_KP = 0.012;          // turn power per degree of tx

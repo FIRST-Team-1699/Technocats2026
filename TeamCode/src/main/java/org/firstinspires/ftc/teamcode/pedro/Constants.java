@@ -17,7 +17,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 public class Constants {
-
+//  robot wifi password technocats26
     public static MecanumConfig drivetrainConfig = new MecanumConfig(c -> {
         c.frontLeftName.set("FL_Drive_Motor");
         c.frontRightName.set("FR_Drive_Motor");
